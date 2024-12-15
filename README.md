@@ -94,12 +94,3 @@ This project is licensed under the MIT License. See `LICENSE` for details.
 
 ---
 
-## **Contact**
-
-📧 **Your Name**  
-GitHub: [YourUsername](https://github.com/yourusername)  
-Email: your.email@example.com  
-
----
-
-This template ensures that your README remains concise but informative as you work on new features. Update the "Current Progress" and "Planned Features" sections as you develop your project.
