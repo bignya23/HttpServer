@@ -23,7 +23,6 @@ void HttpServer::sendResponse(SOCKET clientsocket, std::string content, std::str
 
 std::string HttpServer::getFileContent(std::string& filepath) {
 	
-	filepath = "C:\\Users\\bigny\\OneDrive\\Desktop\\CPP Projects\\HttpServer\\HttpServer\\website\\index.html";
 	
 	std::ifstream file(filepath);
 
