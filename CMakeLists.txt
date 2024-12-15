@@ -13,4 +13,4 @@ project ("HttpServer")
 
 
 # Include sub-projects.
-add_subdirectory ("HttpServer")
+add_subdirectory ("src")
