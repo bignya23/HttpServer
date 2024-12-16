@@ -68,10 +68,13 @@ std::string HttpServer::getFileContent(std::string& filepath) {
 
 	//std::cout << std::filesystem::current_path();
 
-	std::ifstream file(filepath);
+	std::string fullpath = "../../../www/";
+	fullpath += filepath;
+
+	std::ifstream file(fullpath);
 
 	if (!file.is_open()) {
-		exitWithError("File not found : " + filepath);
+		exitWithError("File not found : " + fullpath);
 	}
 
 	std::string content{};
@@ -170,6 +173,7 @@ void HttpServer::start() {
 		cv.notify_one();
 	}
 
+	// Stopping the server
 	{
 		std::lock_guard <std::mutex> lock(mt);
 		stop_server = true;
