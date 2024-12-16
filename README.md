@@ -1,96 +1,81 @@
-# **HTTP Server**
+# Multithreaded HTTP/1.1 Server
 
-![Project Status](https://img.shields.io/badge/Status-In%20Progress-yellow)  
-![Languages](https://img.shields.io/badge/C%2B%2B-100%25-blue)  
-![License](https://img.shields.io/badge/License-MIT-green)
+A lightweight, multithreaded HTTP/1.1 server designed to host static webpages. Built with modern C++ using **sockets**, **multithreading**, and **CMake**.
 
-A simple yet efficient HTTP server written in C++, capable of serving static HTML pages and handling multiple client connections using multithreading (in progress). This project demonstrates the fundamentals of socket programming, HTTP protocol handling, and concurrent programming.
+## Features
 
----
+- **HTTP/1.1 Support**: Handles basic HTTP requests (GET and HEAD).
+- **Static File Hosting**: Serves static HTML, CSS, JavaScript, images, and more.
+- **Multithreaded Architecture**: Efficiently handles multiple client connections concurrently using a thread pool.
+- **Platform**: Compatible with Windows. Made using <winsock.h>.
 
-## **Features**
+## Getting Started
 
-- 🌐 **Serve Static Webpages**  
-  Capable of serving basic HTML files over HTTP. 
+### Prerequisites
 
-- ⚙️ **Multithreading (In Progress)**  
-  Adding support for handling multiple client connections concurrently.  
+- **C++ Compiler**: Ensure you have a compiler that supports C++11 or higher.
+- **CMake**: Version 3.10 or later.
 
-- 🔒 **Customizable**  
-  Easily extendable to include additional HTTP methods or features like HTTPS.  
+### Building the Project
 
----
+1. Clone the repository:
 
-## **Installation**
-
-1. **Clone the Repository**  
    ```bash
    git clone https://github.com/bignya23/http-server.git
    cd http-server
    ```
 
-2. **Build the Project**  
-   Ensure you have a C++ compiler and CMake installed. Then, run:
+2. Create a build directory and configure the project:
+
    ```bash
-   mkdir build && cd build
+   mkdir build
+   cd build
    cmake ..
+   ```
+
+3. Build the project:
+
+   ```bash
    cmake --build .
    ```
 
-3. **Run the Server**  
+4. Run the server:
+
    ```bash
-   ./HttpServer.exe
+   ./http-server.exe
    ```
 
----
+### Configuration
 
-## **Current Progress**
+You can configure the server by editing the following settings in the source code:
 
-### Completed:
-- Basic HTTP request parsing.
-- Serving static HTML files.  
+- **Port**: Default is `8080`.
+- **Document Root**: Set to the directory containing your static files (e.g., `./www`).
 
-### In Progress:
-- Multithreading to handle multiple clients concurrently.
-- Graceful error handling and logging.
+## Usage
 
----
-
-## **Planned Features**
-
-- 🔗 **Support for Additional HTTP Methods**  
-  Extend to include POST, PUT, etc.  
-
-- 🔒 **HTTPS Support**  
-  Secure communication using SSL/TLS.  
-
-- 📊 **Dynamic Content Serving**  
-  Serve dynamic pages with CGI or custom backend integration.  
-
----
+1. Place your static files (e.g., `index.html`, `style.css`, etc.) in the `www/` directory (or the configured document root).
+2. Start the server:
+   ```bash
+   ./http-server
+   ```
+3. Open a browser and navigate to:
+   ```
+   http://<server-ip>:8080
+   ```
+   Replace `<server-ip>` with your server's IP address.
 
 
-## **How It Works**
+## License
 
-1. **Socket Programming**  
-   The server uses sockets to listen for incoming connections and communicate with clients.
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-2. **HTTP Request Handling**  
-   Parses HTTP GET requests to serve the requested files.
+## Acknowledgments
 
-3. **Multithreading (WIP)**  
-   Plans to use a thread pool to handle multiple client requests simultaneously.
-
----
-## **Contributing**
-
-Contributions are welcome! Feel free to submit issues or pull requests to enhance the functionality or fix bugs.
+- Built using C++ and Socket Programming.
+- Inspired by the need for lightweight and educational HTTP server implementations.
 
 ---
 
-## **License**
-
-This project is licensed under the MIT License. See `LICENSE` for details.
-
----
+Feel free to use, modify, and contribute to this project!
 
