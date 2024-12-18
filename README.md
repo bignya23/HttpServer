@@ -57,7 +57,7 @@ You can configure the server by editing the following settings in the source cod
 1. Place your static files (e.g., `index.html`, `style.css`, etc.) in the `www/` directory (or the configured document root).
 2. Start the server:
    ```bash
-   ./http-server
+   ./http-server.exe
    ```
 3. Open a browser and navigate to:
    ```
